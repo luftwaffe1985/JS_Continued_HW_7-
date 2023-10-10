@@ -1,0 +1,311 @@
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+
+  .header {
+    min-height: 75px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .top-content {
+    padding-left: calc(50% - 367px);
+    padding-right: calc(50% - 367px);
+    align-items: center;
+
+    &__content {
+      padding-left: 34px;
+    }
+
+    &__title {
+      @include font-lato-black(44px, 53px);
+    }
+
+    &__subtitle {
+      @include font-lato-bold(24px, 29px);
+    }
+  }
+
+  .content-offer {
+    gap: 19px;
+
+    &__item:nth-child(1):hover {
+      transform: translate(30%, -10%) scale(1.4);
+    }
+
+    &__item:nth-child(3):hover {
+      transform: translate(-30%, -10%) scale(1.4);
+    }
+
+    &__item_big {
+      min-height: 116px;
+      object-fit: cover;
+      transition: all 0.5s ease-out;
+    }
+
+    &__item_big:hover {
+      transition: all 0.8s ease-out;
+      transform: none;
+    }
+  }
+
+  .content-products {
+    &__index-paddings {
+      padding-top: 155px;
+      padding-bottom: 65px;
+    }
+
+    &__title {
+      margin: 0px 0px 3.3px 0px;
+    }
+
+    &__text {
+      margin: 0px 0px 73px 0px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__button {
+      margin-top: 33px;
+    }
+  }
+
+  .footer-advantages {
+    grid-template-columns: 22.5rem;
+    grid-template-rows: repeat(3, 8.375rem);
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .footer-subscribe {
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 140px;
+
+    &__box {
+      margin-bottom: 27px;
+    }
+  }
+
+  .footer-logo {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  #burger:checked ~ .burger__nav {
+    right: -100%;
+  }
+
+  .burger__nav {
+    width: 100%;
+  }
+
+  .burger__heading-box {
+    align-self: center;
+  }
+
+  .burger__item {
+    padding-left: 50px;
+  }
+
+  .top-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &__content {
+      padding: 148px 56px 149px;
+    }
+
+    &__info {
+      padding-left: 15px;
+    }
+
+    &__title {
+      @include font-lato-black(38px, 46px);
+    }
+
+    &__subtitle {
+      @include font-lato-bold(20px, 24px);
+    }
+  }
+
+  .content-offer {
+    row-gap: 32px;
+    grid-template-columns: 344px;
+    margin: 64px 0px 0px 0px;
+    padding-left: calc(50% - 172px);
+    padding-right: calc(50% - 172px);
+
+    &__item:hover {
+      transform: none;
+    }
+
+    &__item:nth-child(1):hover {
+      transform: none;
+    }
+
+    &__item:nth-child(3):hover {
+      transform: none;
+    }
+
+    &__item_big {
+      display: flex;
+      grid-column: span 1;
+      transition: all 0.5s ease-out;
+    }
+
+    &__item_big img {
+      min-height: 111px;
+      object-fit: cover;
+    }
+  }
+
+  .content-products {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &__index-paddings {
+      padding-top: 64px;
+      padding-bottom: 96px;
+    }
+
+    &__title {
+      margin: 0px 0px 3.3px 0px;
+    }
+
+    &__text {
+      margin: 0px 0px 65px 0px;
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    &__button {
+      margin-top: 41px;
+    }
+  }
+
+  .footer-advantages {
+    gap: 47px;
+    padding-bottom: 81px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    &__img {
+      margin: 0px 0px 27px 0px;
+    }
+
+    &__heading {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  .footer-subscribe {
+    padding-bottom: 110px;
+    gap: 59px;
+
+    &__box {
+      margin-bottom: 22px;
+    }
+
+    &__text {
+      @include font-lato-regular(18px, 22px);
+      padding-bottom: 10px;
+    }
+
+    &__title {
+      @include font-lato-semibold(24px, 37px);
+    }
+
+    &__subtitle {
+      @include font-lato-regular(14px, 21px);
+    }
+  }
+
+  .footer-logo {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 43px 62px 9px;
+  }
+}
+
+@media (max-width: 374px) {
+  .center {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .top-content {
+    display: flex;
+    justify-content: center;
+
+    &__title {
+      @include font-lato-black(30px, 40px);
+    }
+
+    &__subtitle {
+      @include font-lato-bold(15px, 18px);
+    }
+  }
+
+  .content-offer {
+    margin: 81px 0px 0px 0px;
+    grid-template-columns: minmax(auto, 304px);
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 15px;
+
+    &__item:hover {
+      transform: none;
+    }
+
+    &__item_big img {
+      min-height: 111px;
+      object-fit: cover;
+    }
+  }
+
+  .content-products {
+    grid-template-columns: minmax(304px, auto);
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &__index-paddings {
+      padding-top: 81px;
+      padding-bottom: 81px;
+    }
+
+    &__text {
+      margin: 0px 0px 40px 0px;
+    }
+  }
+
+  .footer-subscribe {
+    padding-bottom: 81px;
+  }
+}

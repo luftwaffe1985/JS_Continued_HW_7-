@@ -1,0 +1,119 @@
+@import "vars";
+@import "mixins";
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    @include font-lato-regular(30px, 36px);
+    text-align: center;
+    color: $darkColorOfSite;
+    margin: 0;
+    margin: 20px 0px 20px 0px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 652px;
+    max-height: auto;
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    gap: 31px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    background: $lightColorOfSite;
+    position: relative;
+  }
+
+  &__img {
+    height: 100%;
+  }
+}
+
+.item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.item__cross-button {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  top: 28px;
+  right: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: $lightColorOfSite;
+  @include transition-fast();
+
+  &:hover path {
+    fill: $mainColorOfSite;
+    @include transition-slow();
+  }
+
+  &:active path {
+    fill: $mainColorOfSite;
+    @include transition-fast();
+  }
+}
+
+.item__top {
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+}
+
+.item__heading {
+  @include font-lato-regular(24px, 29px);
+  color: $darkColorOfSite;
+  margin: 0;
+}
+
+.item__properties {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item__property_price {
+  @include font-lato-regular(22px, 26px);
+  color: #575757;
+}
+.item__property_price-colorful {
+  color: #ef5b70;
+}
+.item__property_color {
+  @include font-lato-regular(22px, 26px);
+  color: #575757;
+}
+.item__property_size {
+  @include font-lato-regular(22px, 26px);
+  color: #575757;
+}
+.item__property_quantity {
+  @include font-lato-regular(22px, 26px);
+  color: #575757;
+}
+input {
+  margin-left: 24px;
+  @include font-lato-regular(18px, 22px);
+  color: #656565;
+  border: 1px solid #eaeaea;
+  border-radius: 0px;
+  text-align: center;
+  height: 24px;
+  width: 44px;
+  bottom: 0;
+}
